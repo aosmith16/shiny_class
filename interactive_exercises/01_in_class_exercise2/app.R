@@ -4,7 +4,7 @@
      # make output in the server,
      # and then put the plot in the UI
 
-# The basic algorithm is from the
+# The algorithm is from the
      # first Shiny video tutorial slides
      # https://www.dropbox.com/s/rjt6g3ctdqvihat/shiny-quickstart-1.zip?dl=0&file_subpath=%2Fdownloads%2F01-How-to-start.pdf
 

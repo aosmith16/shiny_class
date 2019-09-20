@@ -1,5 +1,5 @@
 # Here is the app code
-     # for the in-class assignment
+     # for the in-class activity
      # for practicing layouts and HTML tags
 
 # Load package shiny

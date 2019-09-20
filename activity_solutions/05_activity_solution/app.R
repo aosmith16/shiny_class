@@ -6,7 +6,7 @@
      # for several weeks
 
 # Students will put this into a 
-     # sidebarLayout with a title panel
+     # sidebarLayout() with a title panel
      # and then add an input for putting
      # a title on the histogram
      # Students can go on to add this

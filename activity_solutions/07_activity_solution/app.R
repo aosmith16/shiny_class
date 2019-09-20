@@ -1,4 +1,4 @@
-# Here is the app we're starting with
+# This is based off of the app we're starting with
      # for the in class exercise
 
 # Students will be asked to add
