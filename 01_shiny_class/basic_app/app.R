@@ -1,6 +1,7 @@
 # Start with a minimal shiny app template
 
-# We'll add an input and an output 
+# We'll build an app, 
+     # adding an input and an output 
      # function to the user interface
 
 # Load package shiny
