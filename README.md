@@ -17,9 +17,9 @@ Here is the basic outline of what I will cover:
      * Syllabus with basic topics, final project, participation  
      * Materials for each class  
 2. Structure of an app  
-     * Go through example apps with runExample() (handout)  
+     * Go through example apps with runExample() (**handout 1**)  
      * Make first app by copying "01_hello": interactive coding  
-     * **In class activity**: students make minor changes to app code (change title, plot look)  
+     * **In class activity**: students make minor changes to app code (change title, max slider #, plot line color)  
 3. Build a basic app  
      * Start with minimal app template  
      * Add reactive input, reactive function, reactive output (histogram example): interactive coding  
@@ -27,7 +27,7 @@ Here is the basic outline of what I will cover:
 ## Class 2
 
 1. Continue basic app as needed
-2. Reactive inputs (control widgets) (handout)
+2. Reactive inputs (control widgets) (**handout 2**)
      * Start with minimal app template  
      * Explore numericInput(), helpTextInput(), sliderInput(), selectInput(): interactive coding  
      * Run app "all_input_functions" to see all input functions  
@@ -35,7 +35,7 @@ Here is the basic outline of what I will cover:
 
 ## Class 3
 
-1. Render*() functions and reactive outputs (handout)
+1. Render\*() functions and reactive outputs (**handout 3**)
      * Start with histogram app template we made in first week  
      * Render functions (renderPlot(), renderPrint(), renderText(), renderTable() ): interactive coding  
 2. **In class activity**: students recreate app shown in image “shiny_class_3_recreate_app.PNG”
@@ -49,7 +49,7 @@ Here is the basic outline of what I will cover:
      * shinapps.io  
      * Shiny server  
 2. Sidebar layout (titlePanel(), sidebarPanel() ): interactive coding   
-3. HTML tags to control user interface (handout)  
+3. HTML tags to control user interface (**handout 4**)  
      * Demonstrate tags (p(), em(), h1(), h2(), img() ): interactive coding  
      * Run “html_tags_example” app to show more HTML tags  
 4. **In class activity**: students recreate app shown in image “shiny_class_4_recreate_app.PNG”  
@@ -76,6 +76,6 @@ Here is the basic outline of what I will cover:
 2. Action buttons to delay reaction: interactive coding
      * Replace reactive() with eventReactive()
      * Mention observeReactive() and reactiveValues()
-3. More built-in panel layouts (handout)
+3. More built-in panel layouts (**handout 5**)
      * Focus on tabs, show example "06_tabsets"
      * Show navlistPanel example: https://shiny.rstudio.com/gallery/navlistpanel-example.html

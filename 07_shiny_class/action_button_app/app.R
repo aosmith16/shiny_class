@@ -29,7 +29,7 @@ ui = fluidPage(
                     a random uniform distribution.
                     Choose the minimum and maximum
                     of the distribution for each variable
-                    using the double-sided slider.") 
+                    using the double-sided sliders.") 
                     ),
                sliderInput(inputId = "x",
                            label = "Choose limits for the x variable:",

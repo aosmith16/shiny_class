@@ -10,14 +10,14 @@
      # selectInput()
 
 # I put app code for all input functions/widgets
-     # into app in folder "all_input_functions)
+     # into app in folder "all_input_functions"
 
 # Load package shiny
 library(shiny)
 
 # User interface
-ui <- fluidPage(
-     # show basic numeric input with value
+ui = fluidPage(
+     # Show numeric input with value
      # Add in min, max, step to show
      # Demonstrate message can get if go below min, etc.
      numericInput(inputId = "num",
@@ -44,7 +44,7 @@ ui <- fluidPage(
                  step = 0.01),
      # Make drop-down menu of selections
      # Start with 2 choices
-     # Show adding names list of values
+     # Show adding names to list of values
      selectInput(inputId = "choose",
                  label = "Select one option below",
                  choices = c("Yes" = "yes",
@@ -53,7 +53,7 @@ ui <- fluidPage(
 )
 
 # Server function
-server <- function(input, output) {
+server = function(input, output) {
      
 }
 

@@ -7,13 +7,15 @@
      # that reactive values need reactive functions
      # or else there will be an error message
 
-# First will use renderText/textOutput to show
-     # output of input reactive value
+# Discuss renderPlot() and plotOuput() again
 # Then show an error, using
      # reactive values outside of a reactive function
-# Show verbatim text output of a summary
-# Then table output, showing multiple lines
-     # within a render function and table/DataTable
+# Introduce new functions
+     # 1. Will use renderText/textOutput to show
+          # output of input reactive value
+     # 2. Show verbatim text output of a summary
+     # 3. Then table output, showing multiple lines
+          # within a render function and table/DataTable
 
 # Load package shiny
 library(shiny)
@@ -37,7 +39,8 @@ ui = fluidPage(
 
 # Server function
 server = function(input, output) {
-     # Show how to render text, how to make
+     # Show how to render text, usually output
+          # of a function, how to make
           # statements with paste() function
      output$text = renderText({
           # paste("The input number is:", input$num)

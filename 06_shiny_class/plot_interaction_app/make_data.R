@@ -13,6 +13,7 @@ group = rep(letters[1:3],
 xvar = runif(n = 75, min = 0, max = 25)
 yvar = runif(n = 75, min = 10, max = 20)
 
+# Put in data.frame "dat"
 dat = data.frame(group, xvar, yvar)
 
 # Save into "plot_interaction_app" folder within

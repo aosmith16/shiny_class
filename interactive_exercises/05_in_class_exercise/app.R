@@ -10,12 +10,12 @@
      # each time in this case but is often used
      # so we don't have a lot of repetititive
      # code doing a task in each render*() function
-     # (Which can be an efficiency issue)
+     # (Which can lead to efficiency issues)
 
 # The main change from the basic
      # histogram app is that we want to add summary()
      # output for the distribution, done
-     # with renderText() and verbatimTextOutput()
+     # with renderPrint() and verbatimTextOutput()
 
 # Demonstrate in the Console how random numbers
      # change when we make a new draw

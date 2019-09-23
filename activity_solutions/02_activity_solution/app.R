@@ -5,7 +5,7 @@
 library(shiny)
 
 # User interface
-ui <- fluidPage(
+ui = fluidPage(
      helpText("Create heatmaps of average",
               br(),
               " tree height across a stand"),
@@ -23,7 +23,7 @@ ui <- fluidPage(
 )
 
 # Server function
-server <- function(input, output) {
+server = function(input, output) {
      
 }
 

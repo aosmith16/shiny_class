@@ -1,5 +1,5 @@
-# Students finished creating our
-     # starter app by adding the y variable
+# Students finished creating the basis of the app
+     # by adding the y variable
      # and plot
 
 # Once that was done the focus can switch
@@ -25,6 +25,7 @@
      # http://shiny.rstudio.com/articles/action-buttons.html
 
 # Start by adding basic action button
+     # at bottom of sidebar
 
 # Load all packages
 library(shiny)
@@ -58,7 +59,7 @@ ui = fluidPage(
                            value = c(0, 10),
                            min = 0,
                            max = 25),
-               # First just do click
+               # First just do click button
                # Then add in width of 100% to go across sidebar
                actionButton(inputId = "click",
                             label = "Update plot",

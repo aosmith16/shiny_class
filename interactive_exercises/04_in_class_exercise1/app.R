@@ -3,7 +3,9 @@
      # and the focus on the
      # the sidebar layout, a common first (and general) layout
 
-# Show the sidebar layout with sidebar on right
+# This starts with a minimal app
+
+# Move sidebar on right
 # Add a slider to sidebar
 
 # We will then focus on learning some of the HTML
@@ -14,14 +16,17 @@
      # paragraphs (p()), 
           # including adding emphasis and
           # changing font and colors
-     # links (link to COF)
-     # images and www folder
+     # links with a() (link to COF)
+     # images with image() and www folder
      # revisit br()
 
-# This all starts with the minimal app
+# Show that add output functions as
+     # have so far by adding plotOutput("hist")
+     # (even though no output in this)
 
-# Switch to app from tutorial to show
-     # more without having to type in real time
+# Switch to app from writen tutorial ("html_tags_example")
+     # to demonstarte more tags
+     # without having to type all in real time
 
 # Load package shiny
 library(shiny)

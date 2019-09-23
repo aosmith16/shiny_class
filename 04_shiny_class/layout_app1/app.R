@@ -1,4 +1,4 @@
-# Start with minimal shiny app template
+# Start with a minimal shiny app template
 
 # We'll add a sidebar layout
 # And then learn HTML tags to control
@@ -8,12 +8,12 @@
 library(shiny)
 
 # User interface
-ui <- fluidPage(
+ui = fluidPage(
      
 )
 
 # Server function
-server <- function(input, output) {
+server = function(input, output) {
      
 }
 

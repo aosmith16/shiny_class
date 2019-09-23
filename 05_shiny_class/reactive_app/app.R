@@ -1,7 +1,8 @@
 # Start with week 1 histogram app
 
 # We will practice using the reactive()
-     # function
+     # function to update data.frames
+     # used to make multiple outputs
 
 # Load package shiny
 library(shiny)

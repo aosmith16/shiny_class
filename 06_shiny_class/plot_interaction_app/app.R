@@ -9,8 +9,8 @@ library(dplyr) # data manip
 # Read data
 dat = read.csv("scatter_dat.csv")
 
-# We will talk about input selection 
-     # for plotting subsets
+# We will talk about selecting inputs 
+     # for plotting subsets of data
 
 # The main focus of this app is on "tooltips" 
      # for interactive plots

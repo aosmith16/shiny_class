@@ -25,8 +25,8 @@ ui = fluidPage(
                  value = 25,
                  min = 1,
                  max = 100),
-     # add plot output
-     # This doesn't change look of ap
+     # Add plot output
+     # This doesn't change look of app
           # but does make space for the plot
      plotOutput("hist")
 )
@@ -38,8 +38,11 @@ ui = fluidPage(
 server = function(input, output) {
      # In server we use inputs to make outputs
      # Outputs must be assigned names
+     
      # Make objects to display using render*() functions
           # when passing in inputs
+          # can also use for non-reactive output
+     
      # output$hist = renderPlot({
      #  title = "100 random values from a normal distribution"
      #  hist( rnorm(100), main = title )    # non-reactive output

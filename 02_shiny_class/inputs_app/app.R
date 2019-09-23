@@ -1,4 +1,4 @@
-# Start with minimal shiny app
+# Start with a minimal shiny app
 
 # We will practice adding different
      # input functions to the UI
@@ -7,12 +7,12 @@
 library(shiny)
 
 # User interface
-ui <- fluidPage(
+ui = fluidPage(
      
 )
 
 # Server function
-server <- function(input, output) {
+server = function(input, output) {
      
 }
 

@@ -1,7 +1,8 @@
 # Start with week 1 histogram app
 
 # We will practice different render
-     # and output functions
+     # and output functions by adding on
+     # to this app
 
 # Load package shiny
 library(shiny)

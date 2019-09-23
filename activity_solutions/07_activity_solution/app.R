@@ -1,5 +1,6 @@
-# This is based off of the app we're starting with
-     # for the in class exercise
+# This is for an in-class activity
+# The base app is from the app we're starting with
+     # for the interactive coding exercise
 
 # Students will be asked to add
      # a second variable y, also with

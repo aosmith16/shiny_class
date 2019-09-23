@@ -1,4 +1,4 @@
-# Start with minimal shiny app template
+# Start with a minimal shiny app template
 
 # We'll add an input and an output 
      # function to the user interface
