@@ -17,8 +17,13 @@ Here is the basic outline of what I will cover:
      * Syllabus with basic topics, final project, participation  
      * Materials for each class  
 2. Structure of an app  
-     * Go through example apps with runExample() (**handout 1**)  
-     * Make first app by copying "01_hello": interactive coding  
+     * Go through example apps 01_hello, 03_reactivity, 04_mpg, 06_tabsets, and 10_download with runExample() (**handout 1**)  
+     * Create first app: interactive coding 
+          * Set working directory  
+          * Make folder for app in that directory  
+          * Copy code from "01_hello" into new script  
+          * Save that script as app.R into app folder  
+          * runApp() function or Run App button  
      * **In class activity**: students make minor changes to app code (change title, max slider #, plot line color)  
 3. Build a basic app  
      * Start with minimal app template  
