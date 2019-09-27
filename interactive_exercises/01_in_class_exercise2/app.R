@@ -27,8 +27,12 @@ ui = fluidPage(
                  max = 100),
      # Add plot output
      # This doesn't change look of app
+          # if haven't made output in server yet
           # but does make space for the plot
      plotOutput("hist")
+     # Will move plotOutput() to the top
+          # so students can see that order in UI
+          # is order of app layout
 )
 
 # We'll add a reactive function that takes
@@ -44,8 +48,7 @@ server = function(input, output) {
           # can also use for non-reactive output
      
      # output$hist = renderPlot({
-     #  title = "100 random values from a normal distribution"
-     #  hist( rnorm(100), main = title )    # non-reactive output
+     #  hist( rnorm(100) )    # non-reactive output
      # })
      
      # Pass in inputs by name; inputId important!
@@ -55,5 +58,9 @@ server = function(input, output) {
      
 }
 
+# Show common errors:
+     # Leave comma after sliderInput() when
+          # move plotOutput() above
+     # Use wrong inputId within renderPlot()
 # Create app object
 shinyApp(ui = ui, server = server)
