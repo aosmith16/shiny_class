@@ -14,7 +14,7 @@ ui = fluidPage(
                  value = 25,
                  min = 1,
                  max = 100),
-     plotOutput("hist")
+     plotOutput(outputId = "hist")
 )
 
 # Server function

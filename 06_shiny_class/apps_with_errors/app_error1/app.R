@@ -16,7 +16,7 @@ ui = fluidPage(
                            max = 100)
                ),
           mainPanel(
-               plotOutput("hist")
+               plotOutput(outputId = "hist")
                )
           )
      )

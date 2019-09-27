@@ -63,7 +63,7 @@ ui = fluidPage(
                h1("First level", align = "center"),
                h2("Second level", align = "center"),
                h3("Third level", align = "center"),
-               plotOutput("hist") 
+               plotOutput(outputId = "hist") 
                )
      )
 )

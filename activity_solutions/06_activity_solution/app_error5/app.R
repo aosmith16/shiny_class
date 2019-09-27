@@ -23,7 +23,7 @@ ui = fluidPage(
                ),
           mainPanel(
                plotOutput("hist")
-               ),
+               )
           )
      )
 

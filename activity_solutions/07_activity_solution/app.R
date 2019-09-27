@@ -43,7 +43,7 @@ ui = fluidPage(
                            max = 25)
           ),
           mainPanel(
-               plotOutput("scatter")
+               plotOutput(plotOutput = "scatter")
           )
      )
 )

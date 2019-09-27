@@ -21,8 +21,8 @@ ui = fluidPage(
                              "Western hemlock",
                              "Bigleaf maple",
                              "Red alder") ),
-     textOutput("select"),
-     textOutput("max")
+     textOutput(outputId = "select"),
+     textOutput(outputId = "max")
 )
 
 # Server function

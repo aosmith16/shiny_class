@@ -37,8 +37,8 @@ ui = fluidPage(
                  value = 25,
                  min = 1,
                  max = 100),
-     plotOutput("hist"),
-     verbatimTextOutput("sum")
+     plotOutput(outputId = "hist"),
+     verbatimTextOutput(outputId = "sum")
 )
 
 # Server function

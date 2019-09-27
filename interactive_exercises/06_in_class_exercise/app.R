@@ -57,8 +57,8 @@ ui = fluidPage(
                                brush = "plot_brush"),
                     # Put output of click below plot
                     # verbatimTextOutput("plot_clickinfo")
-                    tableOutput("plot_clickinfo"),
-                    tableOutput("plot_brushinfo")
+                    tableOutput(outputId = "plot_clickinfo"),
+                    tableOutput(outputId = "plot_brushinfo")
                )
           )
 )

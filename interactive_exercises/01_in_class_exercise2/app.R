@@ -29,7 +29,7 @@ ui = fluidPage(
      # This doesn't change look of app
           # if haven't made output in server yet
           # but does make space for the plot
-     plotOutput("hist")
+     plotOutput(outputId = "hist")
      # Will move plotOutput() to the top
           # so students can see that order in UI
           # is order of app layout

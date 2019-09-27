@@ -29,12 +29,12 @@ ui = fluidPage(
                  min = 1,
                  max = 100),
      # Paired with renderText()
-     textOutput("text"),
+     textOutput(outputId = "text"),
      # Paired with renderPlot()
-     # plotOutput("hist")
+     # plotOutput(outputId = "hist")
      # Paired with renderText()/renderPrint()
-     # verbatimTextOutput("sum")
-     dataTableOutput("table")
+     # verbatimTextOutput(outputId = "sum")
+     dataTableOutput(outputId = "table")
 )
 
 # Server function

@@ -33,7 +33,7 @@ ui = fluidPage(
      fluidRow(
           column(6, offset = 6,
                  h2("Last column, second row"),
-                 plotOutput("hist")
+                 plotOutput(outputId = "hist")
           )
      )
 )
