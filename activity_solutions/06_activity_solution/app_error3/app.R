@@ -1,6 +1,12 @@
 # App that won't run due to error
 # The error message is unclear
 
+# Solution:
+     # I put a comma after sliderInput() 
+          # but did not add an additional element
+          # into the sidebarPanel()
+     # Delete this comma to run the app
+
 # Load package shiny
 library(shiny)
 

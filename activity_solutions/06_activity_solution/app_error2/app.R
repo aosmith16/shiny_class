@@ -1,5 +1,8 @@
-# App that won't run due to error
-# The error message is unclear
+# App with instructive error message
+
+# Solution:
+     # I didn't use a reactive function for reactive input
+     # Add renderPlot() in server function
 
 # Load package shiny
 library(shiny)
@@ -13,17 +16,17 @@ ui = fluidPage(
                            label = "Choose a number of samples",
                            value = 25,
                            min = 1,
-                           max = 100),
+                           max = 100)
                ),
           mainPanel(
                plotOutput("hist")
-               ),
+               )
           )
      )
 
 # Server function
 server = function(input, output) {
-     output$hist = renderPlot({
+     output$hist = ({
           hist( rnorm(input$num) )
      })
      

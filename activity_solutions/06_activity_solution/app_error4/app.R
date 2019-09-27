@@ -1,5 +1,10 @@
-# App that won't run due to error
-# The error message is unclear
+# App that fails with error message
+     # and gives some indication of what the problem is
+
+# Solution:
+     # sliderInput() requires the "label" argument,
+          # which I forgot to include
+     # Add a label in sliderInput() to run the app
 
 # Load package shiny
 library(shiny)
@@ -10,10 +15,9 @@ ui = fluidPage(
      sidebarLayout(
           sidebarPanel(
                sliderInput(inputId = "num",
-                           label = "Choose a number of samples",
                            value = 25,
                            min = 1,
-                           max = 100),
+                           max = 100)
                ),
           mainPanel(
                plotOutput("hist")
@@ -23,8 +27,8 @@ ui = fluidPage(
 
 # Server function
 server = function(input, output) {
-     output$hist = renderPlot({
-          hist( rnorm(input$num) )
+     output = renderPlot({
+          hist( rnorm(input$num), main = input$title )
      })
      
 }

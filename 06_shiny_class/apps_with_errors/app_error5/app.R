@@ -24,7 +24,7 @@ ui = fluidPage(
 # Server function
 server = function(input, output) {
      output = renderPlot({
-          hist( rnorm(input$num), main = input$title )
+          hist( rnorm(input$num) )
      })
      
 }
