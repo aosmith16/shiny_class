@@ -3,6 +3,9 @@
 # We will practice adding different
      # input functions to the UI
 
+# Also see the Widget gallery:
+     #  http://shiny.rstudio.com/gallery/widget-gallery.html
+
 # Load package shiny
 library(shiny)
 

@@ -37,6 +37,10 @@ Here is the basic outline of what I will cover:
      * Explore numericInput(), helpTextInput(), sliderInput(), selectInput(): interactive coding  
      * Run app "all_input_functions" to see all input functions  
 3. **In class activity**: students recreate app shown in image “shiny_class_2_recreate_app.PNG”
+4. Sharing an app (if time allows)
+     * Run code in R from online or GitHub  
+     * https://www.shinyapps.io  
+     * Shiny server
 
 ## Class 3
 
@@ -46,12 +50,16 @@ Here is the basic outline of what I will cover:
 2. **In class activity**: students recreate app shown in image “shiny_class_3_recreate_app.PNG”
 3. Reading data into app  
      * Data within app folder: interactive coding  
+4. Sharing an app (if time allows and haven't covered yet)  
+     * Run code in R from online or GitHub  
+     * https://www.shinyapps.io  
+     * Shiny server
 
 ## Class 4
 
-1. Deploying app  
+1. Sharing an app (if haven't covered yet)
      * Run code in R from online or GitHub  
-     * shinapps.io  
+     * https://www.shinyapps.io  
      * Shiny server  
 2. Sidebar layout (titlePanel(), sidebarPanel() ): interactive coding   
 3. HTML tags to control user interface (**handout 4**)  
