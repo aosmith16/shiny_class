@@ -2,7 +2,7 @@
      # taken from https://shiny.rstudio.com/tutorial/written-tutorial/lesson3/
 
 # Also see output from these input functions
-        # in widget gallery: http://shiny.rstudio.com/gallery/widget-gallery.html
+     # in widget gallery: http://shiny.rstudio.com/gallery/widget-gallery.html
 
 library(shiny)
 
@@ -13,72 +13,106 @@ ui <- fluidPage(
      fluidRow(
           
           column(3,
-                 h3("Buttons"),
-                 actionButton("action", "Action"),
-                 br(),
-                 br(), 
-                 submitButton("Submit")),
+                 h3("Action Button"),
+                 actionButton(inputId = "action", 
+                              label = "Action")
+          ),
           
           column(3,
                  h3("Single checkbox"),
-                 checkboxInput("checkbox", "Choice A", value = TRUE)),
+                 checkboxInput(inputId = "checkbox", 
+                               label = "Choice A", 
+                               value = TRUE)
+          ),
           
           column(3, 
-                 checkboxGroupInput("checkGroup", 
-                                    h3("Checkbox group"), 
+                 checkboxGroupInput(inputId = "checkGroup", 
+                                    label = h3("Checkbox group"), 
                                     choices = list("Choice 1" = 1, 
                                                    "Choice 2" = 2, 
                                                    "Choice 3" = 3),
-                                    selected = 1)),
+                                    selected = 1)
+          ),
           
           column(3, 
-                 dateInput("date", 
-                           h3("Date input"), 
-                           value = "2014-01-01"))   
+                 dateInput(inputId = "date", 
+                           label = h3("Date input"), 
+                           value = "2014-01-01")
+          )   
      ),
      
      fluidRow(
           
           column(3,
-                 dateRangeInput("dates", h3("Date range"))),
+                 dateRangeInput(inputId = "dates", 
+                                label = h3("Date range"))
+          ),
           
           column(3,
-                 fileInput("file", h3("File input"))),
+                 fileInput(inputId = "file", 
+                           label = h3("File input"))
+          ),
           
           column(3, 
                  h3("Help text"),
                  helpText("Note: help text isn't a true widget,", 
                           "but it provides an easy way to add text to",
-                          "accompany other widgets.")),
+                          "accompany other widgets.")
+          ),
           
           column(3, 
-                 numericInput("num", 
-                              h3("Numeric input"), 
-                              value = 1))   
+                 numericInput(inputId = "num", 
+                              label = h3("Numeric input"), 
+                              value = 1)
+          )   
      ),
      
      fluidRow(
           
           column(3,
-                 radioButtons("radio", h3("Radio buttons"),
-                              choices = list("Choice 1" = 1, "Choice 2" = 2,
-                                             "Choice 3" = 3),selected = 1)),
+                 radioButtons(inputId = "radio", 
+                              label = h3("Radio buttons"),
+                              choices = list("Choice 1" = 1, 
+                                             "Choice 2" = 2,
+                                             "Choice 3" = 3),
+                              selected = 1)
+          ),
           
           column(3,
-                 selectInput("select", h3("Select box"), 
-                             choices = list("Choice 1" = 1, "Choice 2" = 2,
-                                            "Choice 3" = 3), selected = 1)),
-          
-          column(3, 
-                 sliderInput("slider1", h3("Sliders"),
-                             min = 0, max = 100, value = 50),
-                 sliderInput("slider2", "",
-                             min = 0, max = 100, value = c(25, 75))
+                 h3("Select boxes"),
+                 selectInput(inputId = "select", 
+                             label = "Select one", 
+                             choices = list("Choice 1" = 1, 
+                                            "Choice 2" = 2,
+                                            "Choice 3" = 3), 
+                             selected = 1),
+                 selectInput(inputId = "select2", 
+                             label = "Select multiple", 
+                             choices = list("Choice 1" = 1, 
+                                            "Choice 2" = 2,
+                                            "Choice 3" = 3), 
+                             selected = 1,
+                             multiple = TRUE)
           ),
           
           column(3, 
-                 textInput("text", h3("Text input"), 
-                           value = "Enter text..."))   
+                 sliderInput(inputId = "slider1", 
+                             label = h3("Sliders"),
+                             min = 0, 
+                             max = 100, 
+                             value = 50),
+                 sliderInput(inputId = "slider2", 
+                             label = "",
+                             min = 0, 
+                             max = 100, 
+                             value = c(25, 75))
+          ),
+          
+          column(3, 
+                 textInput(inputId = "text", 
+                           label = h3("Text input"), 
+                           value = "Enter text...")
+          )   
      )
      
 )
