@@ -17,6 +17,7 @@ library(shiny)
 
 # User interface
 ui = fluidPage(
+     
      # Show numeric input with value = 1
      # Add in min, max, step to control possible values
      # Demonstrate message can get if go below min, etc.
@@ -26,17 +27,9 @@ ui = fluidPage(
                   min = 0,
                   max = 10,
                   step = 2),
-     # Make drop-down menu of selections
-     # Start with 2 choices, yes and no
-     # Show adding names to list of values
-     # Add third option
-     # Use multiple = TRUE
-     selectInput(inputId = "choose",
-                 label = "Select one option below",
-                 choices = c("Yes" = "yes",
-                             "No" = "no",
-                             "Maybe" = "other") ),
-     # Help text isn't true widget
+     
+     # Add helpText() third
+     # Note that help text isn't true widget
      # Show that has no ID
      # Put in one or more text strings;
           # it always wraps
@@ -44,6 +37,22 @@ ui = fluidPage(
      helpText("Numbers must be positive and even,",
               br(),
               "starting at 0"),
+     
+     # Make drop-down menu of selections
+     # Start with 2 choices, yes and no
+     # Use selected to choose something other than first value
+     # Show adding names to list of values
+     # Add third option
+     # Use multiple = TRUE, default selected is NULL
+     selectInput(inputId = "choose",
+                 # label = "Select one option below",
+                 label = "Select options below",
+                 choices = c("Yes" = "yes",
+                             "No" = "no",
+                             "Maybe" = "other"),
+                 # selected = "no",
+                 multiple = TRUE),
+
      # Show single slider (repeat from week 1)
      # Show error message if leave out value/min/max
      # Put in two values for double-sided slider

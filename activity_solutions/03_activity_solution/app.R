@@ -7,9 +7,13 @@ library(shiny)
 
 # User interface
 ui = fluidPage(
-     helpText("Create heatmaps of average",
+     helpText("Plot mtcars$mpg with hist() ",
+              "in renderPlot().",
               br(),
-              " tree height across a stand"),
+              "Use the title input for the hist() 'main' argument."),
+     textInput(inputId = "title",
+               label = "Make a title for the histogram",
+               value = "Histogram showing mtcars$mpg"),
      sliderInput(inputId = "slide",
                  label = "Choose tree size (DBH, inches)",
                  value = c(30, 40),
@@ -22,7 +26,8 @@ ui = fluidPage(
                              "Bigleaf maple",
                              "Red alder") ),
      textOutput(outputId = "select"),
-     textOutput(outputId = "max")
+     textOutput(outputId = "max"),
+     plotOutput(outputId = "hist")
 )
 
 # Server function
@@ -30,12 +35,17 @@ server = function(input, output) {
      output$select = renderText({
           paste("You selected", input$choose)
      })
+     
      output$max = renderText({
           paste("You have chosen trees from",
                 input$slide[1],
                 "to",
                 input$slide[2],
-                "inches DBH")
+                "inches DBH.")
+     })
+     
+     output$hist = renderPlot({
+          hist(mtcars$mpg, main = input$title)
      })
 }
 

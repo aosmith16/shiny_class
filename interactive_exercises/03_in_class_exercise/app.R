@@ -1,4 +1,4 @@
-# We are starting with the week 1 histogram app
+# We are starting with the week 2 input app
      # and then adding
      # different render*() functions and
      # output functions
@@ -7,14 +7,21 @@
      # that reactive values need reactive functions
      # or else there will be an error message
 
+# Start by showing how we can use
+     # renderText() and
+     # textOutput() to see what an
+     # input result looks like
+
 # Discuss renderPlot() and plotOuput() again
-# Then show an error, using
+
+# Show an error, using
      # reactive values outside of a reactive function
+
 # Introduce new functions
      # 1. Will use renderText/textOutput to show
           # output of input reactive value
      # 2. Show verbatim text output of a summary
-     # 3. Then table output, showing multiple lines
+     # 3. Show table output, showing multiple lines
           # within a render function and table/DataTable
 
 # Load package shiny
@@ -22,32 +29,59 @@ library(shiny)
 
 # User interface
 ui = fluidPage(
-     # Add slider
-     sliderInput(inputId = "num",
-                 label = "Choose a number",
-                 value = 25,
-                 min = 1,
-                 max = 100),
+     
+     numericInput(inputId = "num",
+                  label = "Enter number",
+                  value = 6,
+                  min = 0,
+                  max = 10,
+                  step = 2),
+     
+     helpText("Numbers must be positive and even,",
+              br(),
+              "starting at 0"),
+
+     selectInput(inputId = "choose",
+                 label = "Select options below",
+                 choices = c("Yes" = "yes",
+                             "No" = "no",
+                             "Maybe" = "other"),
+                 multiple = TRUE),
+
+     sliderInput(inputId = "slide",
+                 label = "Choose minmum and maximum value",
+                 value = c(10, 20),
+                 min = 0,
+                 max = 50,
+                 step = 0.01),
      # Paired with renderText()
      textOutput(outputId = "text"),
      # Paired with renderPlot()
      # plotOutput(outputId = "hist")
      # Paired with renderText()/renderPrint()
      # verbatimTextOutput(outputId = "sum")
+     # tableOutput(outputId = "table")
      dataTableOutput(outputId = "table")
 )
 
 # Server function
 server = function(input, output) {
-     # Show how to render text, usually output
-          # of a function, how to make
-          # statements with paste() function
+     # Show how to render text to display
+          # what input is
+     # Then use paste() function to create
+          # output statements
      output$text = renderText({
+          # input$num
+          # input$choose
+          # input$slide
           # paste("The input number is:", input$num)
-          paste("The number", input$num, "was the chosen number")
+          paste("You chose a minimum of", input$slide[1], 
+                "and a maximum of", imput$slide[2])
      })
      # Example of table/interactive table to be
           # paired with tableOutput/dataTableOutput
+     # Demonstrates using multiple lines
+          # within a reactive function (which is why the curly braces)
      output$table = renderDataTable({
           norm = rnorm(input$num)
           dat = data.frame(norm)
