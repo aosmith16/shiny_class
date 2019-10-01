@@ -1,25 +1,19 @@
-# Here is an app to show
-     # that data can be read from 
-     # within app folder
+# Start with minimal app
+
+# We will read a dataset from outside
+     # of R and display the top 6 lines
+     # as a table
 
 # Load package shiny
 library(shiny)
 
-# Read in dataset from same directory
-# May want to store in data folder
-dat = read.csv("scatter_dat.csv")
-
 # User interface
 ui = fluidPage(
-     # Add tableOutput to show data as output
-)
+
+     )
 
 # Server function
 server = function(input, output) {
-     # Use renderTable to show first 6 lines
-     output$dat = renderTable({
-          
-          })
      
 }
 
