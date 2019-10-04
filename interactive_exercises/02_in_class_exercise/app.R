@@ -60,7 +60,7 @@ ui = fluidPage(
      # Put in two values for double-sided slider
      # Use "step" for non-integers
      sliderInput(inputId = "slide",
-                 label = "Choose minimum and maximum value",
+                 label = "Choose a minimum and maximum value",
                  value = c(10, 20),
                  min = 0,
                  max = 50,
