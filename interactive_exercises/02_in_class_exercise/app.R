@@ -21,12 +21,14 @@ ui = fluidPage(
      # Show numeric input with value = 1
      # Add in min, max, step to control possible values
      # Demonstrate message can get if go below min, etc.
+     # Change width to 100% of app
      numericInput(inputId = "num",
                   label = "Enter number",
                   value = 6,
                   min = 0,
                   max = 10,
-                  step = 2),
+                  step = 2,
+                  width = "100%"),
      
      # Add helpText() third
      # Note that help text isn't true widget
@@ -38,7 +40,7 @@ ui = fluidPage(
               br(),
               "starting at 0"),
      
-     # Make drop-down menu of selections
+     # Make drop-down menu of selections second
      # Start with 2 choices, yes and no
      # Use selected to choose something other than first value
      # Show adding names to list of values
@@ -46,7 +48,7 @@ ui = fluidPage(
      # Use multiple = TRUE, default selected is NULL
      selectInput(inputId = "choose",
                  # label = "Select one option below",
-                 label = "Select options below",
+                 label = "Select groups to plot below",
                  choices = c("Yes" = "yes",
                              "No" = "no",
                              "Maybe" = "other"),
@@ -58,7 +60,7 @@ ui = fluidPage(
      # Put in two values for double-sided slider
      # Use "step" for non-integers
      sliderInput(inputId = "slide",
-                 label = "Choose minmum and maximum value",
+                 label = "Choose minimum and maximum value",
                  value = c(10, 20),
                  min = 0,
                  max = 50,

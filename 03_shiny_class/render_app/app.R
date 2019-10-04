@@ -22,7 +22,7 @@ ui = fluidPage(
               "starting at 0"),
      
      selectInput(inputId = "choose",
-                 label = "Select options below",
+                 label = "Select groups to plot below",
                  choices = c("Yes" = "yes",
                              "No" = "no",
                              "Maybe" = "other"),
