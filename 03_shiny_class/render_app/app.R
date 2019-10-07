@@ -15,11 +15,12 @@ ui = fluidPage(
                   value = 6,
                   min = 0,
                   max = 10,
-                  step = 2),
+                  step = 2,
+                  width = "100%"),
      
-     helpText("Numbers must be positive and even,",
+     helpText("Select one or more groups",
               br(),
-              "starting at 0"),
+              "from the drop-down menu below."),
      
      selectInput(inputId = "choose",
                  label = "Select groups to plot below",

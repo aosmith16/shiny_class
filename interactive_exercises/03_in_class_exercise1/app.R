@@ -37,9 +37,9 @@ ui = fluidPage(
                   max = 10,
                   step = 2),
      
-     helpText("Numbers must be positive and even,",
+     helpText("Select one or more groups",
               br(),
-              "starting at 0"),
+              "from the drop-down menu below."),
 
      selectInput(inputId = "choose",
                  label = "Select options below",
