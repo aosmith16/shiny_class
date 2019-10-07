@@ -18,7 +18,17 @@ library(shiny)
 # User interface
 ui = fluidPage(
      
-     # Show numeric input with value = 1
+     # Add helpText() third
+     # Note that help text isn't true widget
+     # Show that has no ID
+     # Put in one or more text strings;
+          # it always wraps
+     # Line breaks can be done with br() function
+     helpText("Numbers must be positive and even,",
+              br(),
+              "starting at 0"),
+     
+     # First show numeric input with value = 1
      # Add in min, max, step to control possible values
      # Demonstrate message can get if go below min, etc.
      # Change width to 100% of app
@@ -30,16 +40,6 @@ ui = fluidPage(
                   step = 2,
                   width = "100%"),
      
-     # Add helpText() third
-     # Note that help text isn't true widget
-     # Show that has no ID
-     # Put in one or more text strings;
-          # it always wraps
-     # Line breaks can be done with br() function
-     helpText("Numbers must be positive and even,",
-              br(),
-              "starting at 0"),
-     
      # Make drop-down menu of selections second
      # Start with 2 choices, yes and no
      # Use selected to choose something other than first value
@@ -48,7 +48,7 @@ ui = fluidPage(
      # Use multiple = TRUE, default selected is NULL
      selectInput(inputId = "choose",
                  # label = "Select one option below",
-                 label = "Select groups to plot below",
+                 label = "Select one or more groups to plot",
                  choices = c("Yes" = "yes",
                              "No" = "no",
                              "Maybe" = "other"),
