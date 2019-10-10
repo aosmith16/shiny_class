@@ -3,10 +3,6 @@
      # different render*() functions and
      # output functions
 
-# The first step will be to show
-     # that reactive values need reactive functions
-     # or else there will be an error message
-
 # Start by showing how we can use
      # renderText() and
      # textOutput() to see what an
@@ -23,6 +19,9 @@
      # 2. Show verbatim text output of a summary
      # 3. Show table output, showing multiple lines
           # within a render function and table/DataTable
+
+# End with renderPlot()/plotOutput()
+     # which we saw in week 1
 
 # Load package shiny
 library(shiny)
@@ -54,14 +53,20 @@ ui = fluidPage(
                  min = 0,
                  max = 50,
                  step = 0.01),
+     
      # Paired with renderText()
      textOutput(outputId = "text"),
-     # Paired with renderPlot()
-     # plotOutput(outputId = "hist")
+     
      # Paired with renderText()/renderPrint()
-     # verbatimTextOutput(outputId = "sum")
-     # tableOutput(outputId = "table")
-     dataTableOutput(outputId = "table")
+     # verbatimTextOutput(outputId = "sum"),
+     
+     # Paired with renderTable()/renderDataTable()
+     # tableOutput(outputId = "table"),
+     dataTableOutput(outputId = "table"),
+     
+     # Paired with renderPlot()
+     plotOutput(outputId = "hist")
+     
 )
 
 # Server function
@@ -78,6 +83,16 @@ server = function(input, output) {
           paste("You chose a minimum of", input$slide[1], 
                 "and a maximum of", imput$slide[2])
      })
+     
+     # Show error when not using render*() functions
+     # output$text = input$num
+     
+     # Use renderPrint() to capture all printed input,
+          # needed to get names of summary()
+     # output$sum = renderPrint({
+     #      summary( rnorm(input$num) )
+     # })
+     
      # Example of table/interactive table to be
           # paired with tableOutput/dataTableOutput
      # Demonstrates using multiple lines
@@ -87,17 +102,12 @@ server = function(input, output) {
           dat = data.frame(norm)
           head(dat)
      })
-     # Use renderPrint() to capture all printed input,
-          # needed to get names of summary()
-     # output$sum = renderPrint({
-     #      summary( rnorm(input$num) )
-     # })
-     # Start with the standard histogram we've been making
-     # output$hist = renderPlot({
-     #      hist( rnorm(input$num) )
-     # })
-     # Show error when not using render*() functions
-     # output$hist = hist( rnorm(input$num) )
+
+     # Here is a histogram like week 1
+     output$hist = renderPlot({
+          hist( rnorm(input$num) )
+     })
+
 }
 
 # Create app object

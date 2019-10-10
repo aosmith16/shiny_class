@@ -12,6 +12,9 @@ library(shiny)
      # app directory for organization reasons
 dat = read.csv("data/scatter_dat.csv")
 
+# Show static table head() in
+     # renderTable()
+
 # User interface
 ui = fluidPage(
      # After show static table,
@@ -24,7 +27,7 @@ ui = fluidPage(
                   min = 0,
                   max = nrow(dat) ),
 
-     # Add tableOutput to show data as output
+     # Add tableOutput to show data in output
      tableOutput(outputId = "dat")
 )
 
@@ -36,17 +39,27 @@ server = function(input, output) {
           # numericInput() (which is NA)
      output$dat = renderTable({
           # head(dat)
-          if(is.na(input$num) ) {
+          
+          # if(is.na(input$num) ) {
+          #      return()
+          # } else {
+          #      head(dat, n = input$num)
+          # }
+          
+          # Note might see this written without
+               # the else(), but this
+               # can be less clear and won't necesarily
+               # work if have more than one line of if() or else()
+          if(is.na(input$num) ) 
                return()
-          } else {
-               head(dat, n = input$num)
-          }
+          
+          head(dat, n = input$num)
           })
+     
      # Ask students how to figure out
           # what the output of numericInput
           # is when no value is filled in 
           # (use renderText()/textOutput())
-     
 }
 
 # Create app object
