@@ -75,17 +75,17 @@ server = function(input, output) {
           # what input is
      # Then use paste() function to create
           # output statements
+     # Show how if use invalid input name,
+          # app runs but no output
      output$text = renderText({
           # input$num
           # input$choose
+          # input$slider # invalid input name
           # input$slide
-          # paste("The input number is:", input$num)
+          # paste("The number you chose is:", input$num)
           paste("You chose a minimum of", input$slide[1], 
                 "and a maximum of", imput$slide[2])
      })
-     
-     # Show error when not using render*() functions
-     # output$text = input$num
      
      # Use renderPrint() to capture all printed input,
           # needed to get names of summary()
@@ -99,13 +99,15 @@ server = function(input, output) {
           # within a reactive function (which is why the curly braces)
      output$table = renderDataTable({
           norm = rnorm(input$num)
-          dat = data.frame(norm)
-          head(dat)
+          dat = data.frame(norm, norm2 = norm)
+          dat
      })
 
      # Here is a histogram like week 1
+     # Show the "main" argument so students ready for activity
+     # Show error when not using reactive functions
      output$hist = renderPlot({
-          hist( rnorm(input$num) )
+          hist( rnorm(input$num), main = "Histogram" )
      })
 
 }
