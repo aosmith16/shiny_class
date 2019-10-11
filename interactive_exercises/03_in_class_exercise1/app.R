@@ -99,7 +99,7 @@ server = function(input, output) {
           # within a reactive function (which is why the curly braces)
      output$table = renderDataTable({
           norm = rnorm(input$num)
-          dat = data.frame(norm, norm2 = norm)
+          dat = data.frame(norm, norm2 = norm + 1)
           dat
      })
 
