@@ -1,15 +1,25 @@
-# Start with a minimal shiny app template
+# Start with a sidebar layout 
+     # with title panel as
+     # shiny app template
 
-# We'll add a sidebar layout
+# We'll add content to sidebar layout
 # And then learn HTML tags to control
-     # UI look
+     # text and add links/images
 
 # Load package shiny
 library(shiny)
 
 # User interface
 ui = fluidPage(
-     
+     titlePanel(title = ""), # title of app
+     sidebarLayout(
+          sidebarPanel(
+               # inputs
+          ),
+          mainPanel(
+               # outputs
+          )
+     )
 )
 
 # Server function

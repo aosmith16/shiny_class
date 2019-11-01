@@ -12,17 +12,18 @@ ui = fluidPage(
           position = "right",
           sidebarPanel(
                h2("Background"),
-               p("I made this practice Shiny app while I was a student at OSU"),
+               p("I made this practice Shiny app while I was a student at OSU."),
                br(),
                br(),
                img(src = "OSU_logo.png", height = 64, width = 200)
           ),
           mainPanel(
                h1("Introducing Shiny"),
-               p("Shiny is a package from RStudio that makes it ", 
-                 em("incredibly easy "), 
+               p(strong("Shiny"),
+                 "is a package from RStudio that makes it", 
+                 em("incredibly easy"), 
                  "to build interactive web applications with R."),
-               p("For an introduction and live examples, visit the ",
+               p("For an introduction and live examples, visit the",
                  a("Shiny homepage", 
                    href = "http://shiny.rstudio.com"),
                  "(http://shiny.rstudio.com).")

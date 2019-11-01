@@ -1,10 +1,12 @@
 # In the first exercise we will learn about
-     # basic panels like the title panel
+     # built in panels like the title panel
      # and the focus on the
-     # the sidebar layout, a common first (and general) layout
+     # the sidebar layout, a common general layout
 
 # This starts with a minimal app
 
+# Add title panel
+# Add sidebarlayout with sidebar and main panel
 # Move sidebar on right
 # Add a slider to sidebar
 
@@ -12,20 +14,25 @@
      # tag functions for adding static content
      # with different formatting
 # We cover: 
-     # headers (h1()-h6()), with centering
-     # paragraphs (p()), 
-          # including adding emphasis and
-          # changing font and colors
-     # links with a() (link to COF)
-     # images with image() and www folder
-     # revisit br()
+     # Block tags
+          # headers (h1()-h6()), with and without centering
+          # paragraphs (p()), changing font and colors
+     # Inline formatting, 
+          # adding emphasis with em() (italics)
+          # This can be used within p(), headers, and as labels
+          # The headers can also be used as label
+     # Tags wtih attributes
+          # links with a() (link to COF)
+          # images with image() and www folder
+     # Revisit line breaks with br()
 
-# Show that add output functions as
+# Add output (student activity) to main panel
+     # Show this works same as
      # have so far by adding plotOutput("hist")
-     # (even though no output in this)
+     # after making renderPlot() in server function
 
-# Switch to app from writen tutorial ("html_tags_example")
-     # to demonstarte more tags
+# Switch to app from written tutorial (app "html_tags_example")
+     # to demonstrate more tags
      # without having to type all in real time
 
 # Load package shiny
@@ -35,17 +42,18 @@ library(shiny)
 ui = fluidPage(
      titlePanel("My Shiny App"),
      p("This is an",
-       em("app, "),
+       em("app,"),
        "made in Shiny.", 
        style = "color: blue"),
-     p("It will show an interactive graphic.", style = "font-family: 'times'; color: purple"),
+     p("It will show an interactive graphic.", 
+       style = "font-family: 'times'; color: purple"),
      sidebarLayout(
           # position = "right",
           sidebarPanel(
                # h1("Input slider"),
                h2("Here is a slider"),
                sliderInput(inputId = "num",
-                           label = "Slider",
+                           label = em("Slider"),
                            min = 1,
                            max = 50,
                            value = 25),
@@ -73,6 +81,9 @@ ui = fluidPage(
 
 # Server function
 server = function(input, output) {
+     output$hist = renderPlot({
+          hist(rnorm(input$num), main = "" )
+     })
 
 }
 
