@@ -40,17 +40,17 @@ library(shiny)
 
 # User interface
 ui = fluidPage(
-     titlePanel("My Shiny App"),
+     titlePanel(title = "My Shiny App"),
      p("This is an",
        em("app,"),
        "made in Shiny.", 
        style = "color: blue"),
      p("It will show an interactive graphic.", 
-       style = "font-family: 'times'; color: purple"),
+       style = "color: purple; font-family: 'times'; font-size: 16pt"),
      sidebarLayout(
           # position = "right",
           sidebarPanel(
-               # h1("Input slider"),
+               # h1("Here is a slider"),
                h2("Here is a slider"),
                sliderInput(inputId = "num",
                            label = em("Slider"),
@@ -60,19 +60,22 @@ ui = fluidPage(
                br(),
                br(),
                br(),
-               img(src = "OSU_logo.png", height = 64, width = 200),
+               img(src = "OSU_logo.png", 
+                   height = 64, 
+                   width = 200),
                br(),
-               p("Link to ", 
+               br(),
+               p("Link to", 
                  a("College of Forestry", 
                    href = "https://www.forestry.oregonstate.edu/") 
-                 )
-               ),
+               )
+          ),
           mainPanel(
                h1("First level", align = "center"),
                h2("Second level", align = "center"),
                h3("Third level", align = "center"),
                plotOutput(outputId = "hist") 
-               )
+          )
      )
 )
 

@@ -23,8 +23,11 @@
 # Start by adding rows above output
      # with text to show the rows
 # Then make columns
-# Last slider and plot into 
+# Put slider and plot into 
      # the created grid spaces
+
+# Add a wellPanel() around first grid space
+     # Show how to format code with ctrl (cmd) + I
 
 # Load package shiny
 library(shiny)
@@ -33,12 +36,14 @@ library(shiny)
 ui = fluidPage(
      fluidRow(
           column(width = 3, 
-                 h2("First column"),
-                 sliderInput(inputId = "num",
-                             label = "Choose a number",
-                             value = 25,
-                             min = 1,
-                             max = 100)
+                 wellPanel(
+                      h2("First column"),
+                      sliderInput(inputId = "num",
+                                  label = "Choose a number",
+                                  value = 25,
+                                  min = 1,
+                                  max = 100)
+                 )
           ),
           column(width = 5,
                  h2("Second column")
