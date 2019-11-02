@@ -26,8 +26,9 @@
 # Put slider and plot into 
      # the created grid spaces
 
-# Add a wellPanel() around first grid space
-     # Show how to format code with ctrl (cmd) + I
+# Add a wellPanel() around first grid space (row 1, column 1)
+
+# Show how to format code with ctrl (cmd) + I
 
 # Load package shiny
 library(shiny)
@@ -37,7 +38,7 @@ ui = fluidPage(
      fluidRow(
           column(width = 3, 
                  wellPanel(
-                      h2("First column"),
+                      h2("First row, first column"),
                       sliderInput(inputId = "num",
                                   label = "Choose a number",
                                   value = 25,
@@ -46,13 +47,13 @@ ui = fluidPage(
                  )
           ),
           column(width = 5,
-                 h2("Second column")
+                 h2("First row, Second column")
           )
      ),
      fluidRow(
           column(width = 6, 
                  offset = 6,
-                 h2("Last column, second row"),
+                 h2("Second row, last column"),
                  plotOutput(outputId = "hist")
           )
      )
