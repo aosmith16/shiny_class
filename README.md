@@ -66,22 +66,26 @@ Here is the basic outline of what I will cover:
      * Demonstrate tags (p(), em(), h1(), h2(), img() ): interactive coding  
      * Run “html_tags_example” app to show more HTML tags  
 4. **In class activity**: students recreate app shown in image “shiny_class_4_recreate_app.PNG”  
-5. Grid layout (fluidRow(), column() ): interactive coding   
+5. If time: grid layout (fluidRow(), column(), wellPanel() ): interactive coding   
+     * Mention shinydashboard package for dashboard templates
 
 ## Class 5
 
-1. **In class activity**: students recreate app shown in image “shiny_class_5_recreate_app.PNG”  
+1. **In class activity**: fix errors in five example apps  
 2. The reactive() function to build dataset for use in render*() functions: interactive coding  
+3. Making a scatterplot for separate groups: interactive coding
+     * Review of selectInput()
+     * Filtering dataset in reactive()
+     * Add *All* option along with if() statement in reactive()
 
 ## Class 6
 
-1. **In class activity**: fix errors in five example apps
-2. Add interactivity to a scatterplot: interactive coding
+*Cancelled this class due to Veteran's Day holiday; moved some materials to other days*
+1. Add interactivity to a scatterplot: interactive coding
      * Can put source code in app folder
      * Read in data from app folder
      * Add click/hover/brush to plotOutput()
      * Make tables in server(), add tableOutput() to UI
-     * As time allows, show adding an “All” option to selectInput() and a conditional in reactive()
 
 ## Class 7
 
@@ -89,6 +93,6 @@ Here is the basic outline of what I will cover:
 2. Action buttons to delay reaction: interactive coding
      * Replace reactive() with eventReactive()
      * Mention observeReactive() and reactiveValues()
-3. More built-in panel layouts (**handout 5**)
+4. More built-in panel layouts (**handout 5**)
      * Focus on tabs, show example "06_tabsets"
      * Show navlistPanel example: https://shiny.rstudio.com/gallery/navlistpanel-example.html
