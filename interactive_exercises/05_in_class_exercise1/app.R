@@ -2,24 +2,28 @@
      # is to demonstrate
      # the reactive() function
 
-# This can be used when we want to show
+# This function is useful when we want to show
      # multiple reactive outputs based on
      # the same reactive input
 
-# This makes sure we aren't simulating new data
-     # each time in this case but is often used
+# In this case this makes sure we 
+     # aren't simulating new data for each function
+     # but reactive() is often used
      # so we don't have a lot of repetititive
-     # code doing a task in each render*() function
+     # code doing the same task within 
+     # each render*() function
      # (Which can lead to efficiency issues)
 
+
 # The main change from the basic
-     # histogram app is that we want to add summary()
+     # histogram app we've used in the past
+     # is that we want to add summary()
      # output for the distribution, done
      # with renderPrint() and verbatimTextOutput()
 
 # Demonstrate in the Console how random numbers
      # change when we make a new draw
-     # (this can be fixed with set.seed()
+     # (this can be addressed with set.seed()
           # but the goal here is to demonstrate reactive() )
 
 # Load package shiny
@@ -38,28 +42,36 @@ ui = fluidPage(
                  min = 1,
                  max = 100),
      plotOutput(outputId = "hist"),
+     # Add verbatimTextOutput() for summary()
      verbatimTextOutput(outputId = "sum")
 )
 
 # Server function
 server = function(input, output) {
+     # Add summary() with renderPrint()
+          # (Encourage students to do add
+          # renderPrint()/verbatimTextOutput())
+     
      # Start with 2 sep render*() functions that
           # take a different random sample each time
      # output$hist = renderPlot({
-     #      hist( rnorm(input$num) )
+     #      hist( n = rnorm(input$num) )
      # })
      # 
      # output$sum = renderPrint({
-     #      summary( rnorm(input$num) )
+     #      summary( n = rnorm(input$num) )
      # })
      
      # Use reactive() function to draw the random
           # sample one time
-     # This is not output to use in output functions
+     # We are not using this as output for the UI
           # so don't name with output$
+     # Instead it gives reactive output
+          # we can use in other reactive functions
      samp = reactive({
-          rnorm(input$num)
+          rnorm(n = input$num)
      })
+     
      # Use samp() in the render functions
           # (call it like a function)
      output$hist = renderPlot({

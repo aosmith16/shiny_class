@@ -1,10 +1,9 @@
-# Start with app that has read in packages
-     # and data
+# Start with app that reads in data
+     # and has selection widget to choose
+     # one of three groups
 
 # Load packages
 library(shiny)
-library(ggplot2) # plotting
-library(dplyr) # data manip
 
 # Read data
 dat = read.csv("scatter_dat.csv")
@@ -26,11 +25,11 @@ ui = fluidPage(
                            choices = c("A" = "a",
                                        "B" = "b",
                                        "C" = "c") )
-               ),
-               mainPanel(
-                    # output
-               )
+          ),
+          mainPanel(
+               # output
           )
+     )
 )
      
 # Server function
