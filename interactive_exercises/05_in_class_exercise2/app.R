@@ -1,8 +1,13 @@
 # Today the focus is on practicing reactive()
-     # as well as waht it looks like to 
+     # as well as what it looks like to 
      # 1. Subset a dataset for plotting
      # 2. Use a select widget to choose the subset group
      # 3. Practice if() statement by adding an "All" group
+          # to the choices
+
+# Also talk about having additional scripts
+     # in the app directory, which can
+     # be run using source()
 
 # The starting app has code for reading the data
      # and the select input function
@@ -25,7 +30,7 @@ dat = read.csv("scatter_dat.csv")
      # for plotting subsets
 # User interface
 ui = fluidPage(
-     titlePanel("Interactive plots"),
+     titlePanel("Choosing groups to plot"),
      sidebarLayout(
           sidebarPanel(
                # Start with three groups to choose from (A, B, C)
@@ -42,7 +47,7 @@ ui = fluidPage(
           # Will also show dataset as DataTable
           mainPanel(
                plotOutput(outputId = "scatter"),
-               dataTableOutput(outputId = "dat")
+               dataTableOutput(outputId = "outdat")
           )
      )
 )
@@ -67,7 +72,13 @@ server = function(input, output) {
           # as we select different groups
      # Have students practice using data() 
           # from reactive with renderDataTable()
-     output$dat = renderDataTable({
+     
+     # If get warning message about the data table,
+          # the current htmltools (0.4) leads to this
+          # downgrade or use DT versions of functions directly 
+               # (i.e., DT::renderDataTable and DT::dataTableOutput)
+          # See https://github.com/rstudio/shiny/issues/2653
+     output$outdat = renderDataTable({
           data()
      })
      

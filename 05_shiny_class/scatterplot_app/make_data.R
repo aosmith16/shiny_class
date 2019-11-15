@@ -1,4 +1,4 @@
-# Shiny class 6 example
+# Shiny class 5 example
 
 # Make grouped data for scatterplot example
 
@@ -16,9 +16,8 @@ yvar = runif(n = 75, min = 10, max = 20)
 # Put in data.frame "dat"
 dat = data.frame(group, xvar, yvar)
 
-# Save into "plot_interaction_app" folder within
-     # root directory
+# Save into "scatterplot_app" folder within
+     # root directory for shiny class 5
 write.csv(x = dat,
-          file = here::here("plot_interaction_app", "scatter_dat.csv"),
+          file = here::here("scatterplot_app", "scatter_dat.csv"),
           row.names = FALSE)
-          

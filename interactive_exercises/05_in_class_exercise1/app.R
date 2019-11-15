@@ -1,4 +1,4 @@
-# The in-class exercise this week
+# The first in-class exercise this week
      # is to demonstrate
      # the reactive() function
 
@@ -7,17 +7,17 @@
      # the same reactive input
 
 # In this case this makes sure we 
-     # aren't simulating new data for each function
-     # but reactive() is often used
+     # aren't simulating new data for each output
+     # we are making
+     # but reactive() is often useful
      # so we don't have a lot of repetititive
      # code doing the same task within 
-     # each render*() function
+     # multiple render*() functions
      # (Which can lead to efficiency issues)
-
 
 # The main change from the basic
      # histogram app we've used in the past
-     # is that we want to add summary()
+     # is that we now want to add summary()
      # output for the distribution, done
      # with renderPrint() and verbatimTextOutput()
 
@@ -49,8 +49,9 @@ ui = fluidPage(
 # Server function
 server = function(input, output) {
      # Add summary() with renderPrint()
-          # (Encourage students to do add
-          # renderPrint()/verbatimTextOutput())
+          # (Students attempt to add
+          # renderPrint()/verbatimTextOutput()
+          # as an exercise before we do as a class)
      
      # Start with 2 sep render*() functions that
           # take a different random sample each time
@@ -65,10 +66,17 @@ server = function(input, output) {
      # Use reactive() function to draw the random
           # sample one time
      # We are not using this as output for the UI
-          # so don't name with output$
-     # Instead it gives reactive output
-          # we can use in other reactive functions
+          # so don't to name it with output$
+     # Instead we get reactive output
+          # to use in other reactive functions
+          # within the server
+     
+     # In a last step, add a seed into reactive()
+          # to show students are actually getting the 
+          # output from the same distribution
+          # compared to making summary/hist outside of shiny
      samp = reactive({
+          set.seed(16) # Add this last to demonstrate results are from same vector
           rnorm(n = input$num)
      })
      

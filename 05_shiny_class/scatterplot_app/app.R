@@ -17,7 +17,7 @@ dat = read.csv("scatter_dat.csv")
 
 # User interface
 ui = fluidPage(
-     titlePanel("Interactive plots"),
+     titlePanel("Choosing groups to plot"),
      sidebarLayout(
           sidebarPanel(
                selectInput(inputId = "pick",
