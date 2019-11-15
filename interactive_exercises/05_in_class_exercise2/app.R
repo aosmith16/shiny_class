@@ -24,7 +24,14 @@ library(ggplot2) # plotting
 library(dplyr) # data manip
 
 # Read data
-dat = read.csv("scatter_dat.csv")
+# dat = read.csv("scatter_dat.csv")
+
+# Alternative to reading data, as last
+     # point of discussion use source()
+     # to create the dataset by
+     # running the code in make_data.R 
+          # (comment out dataset saving lines first)
+source("make_data.R")
 
 # We will talk about input selection 
      # for plotting subsets
