@@ -1,6 +1,8 @@
 # App that won't run due to error
 # The error message is unclear
 
+# 2019-11 This no longer causes an error
+
 # Solution:
      # I put a comma after sliderInput() 
           # but did not add an additional element

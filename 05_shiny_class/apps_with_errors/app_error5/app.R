@@ -1,6 +1,8 @@
 # App that won't run due to error
 # The error message is unclear
 
+# 2019-11 This no longer causes an error
+
 # Load package shiny
 library(shiny)
 
