@@ -68,10 +68,10 @@ server = function(input, output) {
      data = reactive({
           # Looks like need return() here to get whole dataset
           if(input$pick == "All") {
-               return(dat)
+               dat
+          } else {
+               filter(dat, group == input$pick)
           }
-          
-          filter(dat, group == input$pick)
           
      })
      
