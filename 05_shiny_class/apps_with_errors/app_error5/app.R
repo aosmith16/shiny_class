@@ -1,5 +1,5 @@
-# App that runs with no error message
-     # but has no output
+# App that won't run due to error
+# The error message is unclear
 
 # Load package shiny
 library(shiny)
@@ -13,17 +13,18 @@ ui = fluidPage(
                            label = "Choose a number of samples",
                            value = 25,
                            min = 1,
-                           max = 100)
+                           max = 100),
+               
                ),
           mainPanel(
-               plotOutput(outputId = "hist")
+               plotOutput("hist")
                )
-          )
+          ),
      )
 
 # Server function
 server = function(input, output) {
-     output = renderPlot({
+     output$hist = renderPlot({
           hist( rnorm(input$num) )
      })
      
