@@ -54,7 +54,7 @@ ui = fluidPage(
           # Will also show dataset as DataTable
           mainPanel(
                plotOutput(outputId = "scatter"),
-               dataTableOutput(outputId = "outdat")
+               DT::dataTableOutput(outputId = "outdat")
           )
      )
 )
@@ -85,7 +85,7 @@ server = function(input, output) {
           # downgrade or use DT versions of functions directly 
                # (i.e., DT::renderDataTable and DT::dataTableOutput)
           # See https://github.com/rstudio/shiny/issues/2653
-     output$outdat = renderDataTable({
+     output$outdat = DT::renderDataTable({
           data()
      })
      
