@@ -63,7 +63,7 @@ ui = fluidPage(
                # First just do click button with inputId and label
                # Then add in width of 100% to go across entire sidebar
                actionButton(inputId = "click",
-                            label = "Update plot",
+                            label = "Plot the data",
                             width = "100%")
           ),
           mainPanel(
