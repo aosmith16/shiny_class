@@ -18,6 +18,8 @@ dat = data.frame(group, xvar, yvar)
 
 # Save into "scatterplot_app" folder within
      # root directory for shiny class 5
-write.csv(x = dat,
-          file = here::here("scatterplot_app", "scatter_dat.csv"),
-          row.names = FALSE)
+# Comment out for the sourcing example in 
+     # interactive exercise
+# write.csv(x = dat,
+#           file = here::here("scatterplot_app", "scatter_dat.csv"),
+#           row.names = FALSE)

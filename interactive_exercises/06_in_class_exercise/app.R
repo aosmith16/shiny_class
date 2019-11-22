@@ -1,10 +1,11 @@
 # Students finished creating the basis of the app
      # by adding the y variable
-     # and plot
+     # and a scatterplot of x vs y 
+     # (using whatever plotting package they like)
 
-# Once that was done the focus can switch
+# Once that was done the focus switched
      # to action buttons to delay
-     # re-plotting until all reactive values
+     # plotting until all 5 reactive values
      # are selected
 
 # Action buttons are used with 
@@ -14,8 +15,8 @@
 # We will focus on eventReactive() 
 
 # Delaying reactions can be much more efficient
-     # and can make the the output feel
-     # cleaner for the user
+     # and can make the app feel
+     # cleaner (less busy) for the user
 
 # This is most apparent when there are several
      # reactive values that all are used in
@@ -37,16 +38,16 @@ ui = fluidPage(
      sidebarLayout(
           sidebarPanel(
                sliderInput(inputId = "num",
-                           label = "Choose number values to draw:",
+                           label = "Choose number of values to draw:",
                            value = 25,
                            min = 10,
                            max = 100),
                helpText(
-                    em("The x and y variables are drawn from
-                    a random uniform distribution.
-                    Choose the minimum and maximum
+                    em("The x and y variables are simulated
+                    via random draws from the uniform distribution.
+                    Choose the minimum and maximum value
                     of the distribution for each variable
-                    using the double-sided slider.") 
+                    using the double-sided sliders below.") 
                     ),
                sliderInput(inputId = "x",
                            label = "Choose limits for the x variable:",
@@ -59,8 +60,8 @@ ui = fluidPage(
                            value = c(0, 10),
                            min = 0,
                            max = 25),
-               # First just do click button
-               # Then add in width of 100% to go across sidebar
+               # First just do click button with inputId and label
+               # Then add in width of 100% to go across entire sidebar
                actionButton(inputId = "click",
                             label = "Update plot",
                             width = "100%")
@@ -75,9 +76,13 @@ ui = fluidPage(
 server = function(input, output) {
 
      # Change reactive statement to eventReactive()
-     # Use input$click to avoid updating plot
-          # until button clicked
-     data = eventReactive(input$click, {
+     # Use input$click as the eventExpr 
+          # to avoid updating plot
+          # until the action button is clicked
+     # The second argument is the expression
+          # to call when the button is clicked
+          # and is surrounded by curly braces
+     data = eventReactive(eventExpr = input$click, {
           x = runif(n = input$num, 
                     min = input$x[1], 
                     max = input$x[2])
@@ -86,10 +91,11 @@ server = function(input, output) {
                     min = input$y[1], 
                     max = input$y[2])
           data.frame(x, y)
-     })
+     }
+     )
      
      output$scatter = renderPlot({
-          ggplot(data = data(), aes(x, y) ) +
+          ggplot(data = data(), aes(x = x, y = y) ) +
                geom_point(size = 3) +
                theme_bw(base_size = 18)
      })

@@ -78,21 +78,21 @@ Here is the basic outline of what I will cover:
      * Filtering dataset in reactive()
      * Add *All* option along with if() statement in reactive()
 
-## Class 6
+## Class 6 original - canceled
 
-*Cancelled this class due to Veteran's Day holiday; moved some materials to other days*
+*Canceled this class due to Veteran's Day holiday; moved some materials to other days*
 1. Add interactivity to a scatterplot: interactive coding
      * Can put source code in app folder
      * Read in data from app folder
      * Add click/hover/brush to plotOutput()
      * Make tables in server(), add tableOutput() to UI
 
-## Class 7
+## Class 6
 
-1. **In class activity**: add second variable to app to recreate “shiny_class_7_recreate_app.PNG”
+1. **In class activity**: add second variable to app to recreate “shiny_class_6_recreate_app.PNG”
 2. Action buttons to delay reaction: interactive coding
      * Replace reactive() with eventReactive()
-     * Mention observeReactive() and reactiveValues()
+     * Mention observeEvent() and reactiveValues()
 4. More built-in panel layouts (**handout 5**)
      * Focus on tabs, show example "06_tabsets"
-     * Show navlistPanel example: https://shiny.rstudio.com/gallery/navlistpanel-example.html
+     * Show navlistPanel() example: https://shiny.rstudio.com/gallery/navlistpanel-example.html

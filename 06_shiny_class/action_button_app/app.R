@@ -20,16 +20,16 @@ ui = fluidPage(
      sidebarLayout(
           sidebarPanel(
                sliderInput(inputId = "num",
-                           label = "Choose number values to draw:",
+                           label = "Choose number of values to draw:",
                            value = 25,
                            min = 10,
                            max = 100),
                helpText(
-                    em("The x and y variables are drawn from
-                    a random uniform distribution.
-                    Choose the minimum and maximum
+                    em("The x and y variables are simulated
+                    via random draws from the uniform distribution.
+                    Choose the minimum and maximum value
                     of the distribution for each variable
-                    using the double-sided sliders.") 
+                    using the double-sided sliders below.") 
                     ),
                sliderInput(inputId = "x",
                            label = "Choose limits for the x variable:",
