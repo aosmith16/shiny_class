@@ -66,7 +66,6 @@ server = function(input, output) {
      # Show if() statement for "All" choice
           # so either use whole dataset or filter if not "All"
      data = reactive({
-          # Looks like need return() here to get whole dataset
           if(input$pick == "All") {
                dat
           } else {
