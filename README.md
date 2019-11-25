@@ -1,14 +1,14 @@
 # Introduction to Shiny
 
-This repository contains the files used in an Introduction to Shiny reading and conference class I will teach in Fall 2019 (2019-09-30 to 2019-12-04).  The class meets for a total of eight 2-hour sessions, with the last session reserved for students to show off their own apps.
+This repository contains the files used in an Introduction to Shiny reading and conference class I taught in Fall 2019.  The class met for a total of seven 2-hour sessions, with the last session reserved for students to show their own apps.
 
-Materials for class session are in separate folders for each meeting.  These contain app templates that were the basis for interactive coding, handouts, and pictures of apps for students to recreate.
+Materials used during class session are stored in separate folders.  These contain app templates that were the basis for interactive coding, handouts, and pictures of apps for students to recreate during in-class activities.
 
-Apps with the code we worked on interactively together are in a folder named "interactive_exercises", mostly to help me remember what I wanted to cover.  Apps that students were to recreate on their own are stored in "activity_solutions".
+Final versions of apps with the code we worked on interactively in class are in a folder named "interactive_exercises", mostly to help me remember what I wanted to cover.  Apps that students were to recreate on during activities are stored in "activity_solutions".
 
-# Outline
+# Class outline
 
-Here is the basic outline of what I will cover:
+Here is the basic outline of what I covered:
 
 ## Class 1
 
